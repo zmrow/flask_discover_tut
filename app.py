@@ -1,6 +1,5 @@
 # import the Flask class
 from flask import Flask, render_template, redirect, url_for, request, session, flash, g
-#from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.sqlalchemy import SQLAlchemy
 from functools import wraps
 
