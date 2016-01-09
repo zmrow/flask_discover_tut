@@ -1,10 +1,12 @@
 # import the Flask class
 from flask import Flask, render_template, redirect, url_for, request, session, flash, g
 from flask.ext.sqlalchemy import SQLAlchemy
+from flask.ext.bcrypt import Bcrypt
 from functools import wraps
 
 # create the app object
 app = Flask(__name__)
+bcrypt = Bcrypt(app)
 
 # Config
 import os
