@@ -1,8 +1,9 @@
-from app import db
-from project.users.views import bcrypt
+from project import db
+from project import bcrypt
 
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import relationship
+
 
 class BlogPost(db.Model):
 
