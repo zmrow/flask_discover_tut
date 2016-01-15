@@ -28,6 +28,18 @@ class User(db.Model):
     password = db.Column(db.String, nullable=False)
     posts = relationship("BlogPost", backref="author")
 
+    def is_authenticated(self):
+        return True
+
+    def is_active(self):
+        return True
+
+    def is_anonymous(self):
+        return False
+
+    def get_id(self):
+        return unicode(self.id)
+
     def __init__(self, name, email, password):
         self.name = name
         self.email = email
@@ -35,3 +47,4 @@ class User(db.Model):
 
     def __repr__(self):
         return '<name {}'.format(self.name)
+
